@@ -4,8 +4,6 @@ from langchain.output_parsers import PydanticOutputParser
 from langchain.prompts import ChatPromptTemplate
 from xiaohongshu_model import XiaoHongShu
 
-import os
-
 
 def generate_xiaohongshu(theme, openai_api_key):
     prompt = ChatPromptTemplate.from_messages([
@@ -21,4 +19,3 @@ def generate_xiaohongshu(theme, openai_api_key):
     })
     return result
 
-print(generate_xiaohongshu("大模型", os.getenv("OPENAI_API_KEY")))
